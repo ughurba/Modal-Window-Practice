@@ -23,4 +23,12 @@ btnsModalWindows.forEach((item) => {
 });
 
 closeBtnWindow.addEventListener('click',modalWindowsClassAdd);
+
 overlay.addEventListener('click',modalWindowsClassAdd);
+
+document.addEventListener('keydown', function(item){
+  if(item.key === 'Escape' && !modalWindow.classList.contains('hidden')){
+    modalWindowsClassAdd();
+  }
+
+});

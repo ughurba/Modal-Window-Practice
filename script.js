@@ -7,20 +7,20 @@ const overlay = document.querySelector('.overlay');
 
 //functions
 
-const modalWindows = function(){
+const modalWindowsClassRemove = function(){
   modalWindow.classList.remove('hidden')
   overlay.classList.remove('hidden')
+}
+const modalWindowsClassAdd = function(){
+  modalWindow.classList.add('hidden');
+  overlay.classList.add('hidden');
 }
 
 
 
-
 btnsModalWindows.forEach((item) => {
-  item.addEventListener('click', modalWindows)
-
+  item.addEventListener('click', modalWindowsClassRemove)
 });
 
-closeBtnWindow.addEventListener('click',function(){
-  modalWindow.classList.add('hidden');
-  overlay.classList.add('hidden');
-});
+closeBtnWindow.addEventListener('click',modalWindowsClassAdd);
+overlay.addEventListener('click',modalWindowsClassAdd);
